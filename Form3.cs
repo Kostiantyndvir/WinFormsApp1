@@ -39,22 +39,6 @@ namespace WinFormsApp1
             dictionary.Add("xcos", Functions.xCos);
         }
 
-        public Func Func
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public Method Method
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             outputState = new int[8];

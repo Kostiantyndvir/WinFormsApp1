@@ -22,38 +22,6 @@ namespace WinFormsApp1
         TimeOnly startTime, endTime;
         public Form1() { InitializeComponent(); }
 
-        public Form3 Form3
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public Func Func
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public Form2 Form2
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public Method Method
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
         double CallIntMet(double a, double b, int n, int i, Func func, int function)
         {
             switch (i)
