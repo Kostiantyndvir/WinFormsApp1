@@ -1,7 +1,7 @@
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static WinFormsApp1.IntegrationMethods;
-using static WinFormsApp1.Functions;
-namespace WinFormsApp1
+using static NumericalIntegration.IntegrationMethods;
+using static NumericalIntegration.Functions;
+namespace NumericalIntegration
 {
     public delegate double Func(double x);
     public delegate double Method(double a, double b, int n, Func f);
@@ -36,7 +36,7 @@ namespace WinFormsApp1
             return 1;
         }
 
-        // виведення при sin()
+        // виведення при sin()//////////
         void OutFunc(double a, double b, int n, Func func, int function)
         {
             

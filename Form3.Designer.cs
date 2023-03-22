@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1
+﻿namespace NumericalIntegration
 {
     partial class Form3
     {

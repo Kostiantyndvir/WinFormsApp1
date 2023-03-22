@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
-using static WinFormsApp1.IntegrationMethods;
+using static NumericalIntegration.IntegrationMethods;
 
-namespace WinFormsApp1
+namespace NumericalIntegration
 {
     public partial class Form3 : Form
     {

@@ -7,7 +7,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WinFormsApp1
+namespace NumericalIntegration
 {
     public static class IntegrationMethods
     {

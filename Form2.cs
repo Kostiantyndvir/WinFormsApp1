@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 //using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace WinFormsApp1
+namespace NumericalIntegration
 {
     public partial class Form2 : Form
     {
