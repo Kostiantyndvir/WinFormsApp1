@@ -10,14 +10,14 @@ namespace NumericalIntegration
         const int algorithms = 6;
         int countFunction = 7;
 
-        string[] values = new string[algorithms] ; // масив значень інтегралів
-        string[] times = new string[algorithms]; // масив часу обчислень
-        // передаю далі
+        string[] values = new string[algorithms]; // an array of integral values
+        string[] times = new string[algorithms]; // computation time array
+        
         double[] timesAll = new double[algorithms]; 
-        double[] average = new double[algorithms]; //
-        string[] averageString = new string[algorithms]; // масив для виведення
-        // передаю далі
-        double[] mistakes = new double[algorithms]; // масив похибок
+        double[] average = new double[algorithms]; 
+        string[] averageString = new string[algorithms]; // array to output
+        
+        double[] mistakes = new double[algorithms]; // array of errors
 
         TimeOnly startTime, endTime;
         public Form1() { InitializeComponent(); }
@@ -36,7 +36,7 @@ namespace NumericalIntegration
             return 1;
         }
 
-        // виведення при sin()//////////
+        // output at sin()
         void OutFunc(double a, double b, int n, Func func, int function)
         {
             
@@ -48,7 +48,7 @@ namespace NumericalIntegration
                 endTime = TimeOnly.FromDateTime(DateTime.Now);
                 times[i] = Math.Round((endTime - startTime).TotalSeconds * 1000, 5).ToString();
                 timesAll[i] += Math.Round((endTime - startTime).TotalSeconds * 1000, 5);
-                // похибка у відсотках
+                // error in percent
                 mistakes[i] += Math.Abs(Math.Round(100 * (average[0] - average[i]) / average[0], 4));
             }
             dataGridView1.Rows.Add(values);
@@ -91,8 +91,8 @@ namespace NumericalIntegration
                 mistakes[i] = 0;
                 timesAll[i] = 0;
             }
-            double a, b; // межі інтегрування та крок
-            int n; // кількість проміжків розбиття
+            double a, b; // limits of integration and step
+            int n; // number of partition intervals
 
             a = (double)numericUpDown1.Value;
             b = (double)numericUpDown2.Value;

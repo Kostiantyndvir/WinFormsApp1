@@ -60,7 +60,7 @@ namespace NumericalIntegration
             string temp = textBox1.Text;
             inputString = "";
 
-            // видаляємо пробіли якщо є
+            // remove spaces if there are any
             while (currentSymbol < temp.Length)
             {
                 while (temp[currentSymbol] == ' ')
@@ -78,7 +78,7 @@ namespace NumericalIntegration
             {
                 char curr = inputString[currentSymbol];
                 char next = inputString[currentSymbol + 1];
-                // зчитування +, -
+                // read +, -
                 if (signs1.Contains(curr))
                 {
                     signs.Add(curr);
@@ -90,7 +90,7 @@ namespace NumericalIntegration
                         signs.Add('*');
                     }
                 }
-                // зчитування цифри
+                // reading numbers
                 else if (char.IsNumber(curr))
                 {
                     currentNumber += curr;
@@ -109,7 +109,7 @@ namespace NumericalIntegration
                     }
 
                 }
-                // зчитування *, /, %
+                // read *, /, %
                 else if (signs2.Contains(curr))
                 {
                     signs.Add(curr);
@@ -125,7 +125,7 @@ namespace NumericalIntegration
                     outputState[3]++;
                 else if (curr == ')' && !signs1.Contains(next))
                     outputState[4]++;
-                // зчитування назви функції
+                // reading the function name
                 else if (char.IsLetter(curr))
                 {
                     currentFunction += curr;
@@ -164,7 +164,7 @@ namespace NumericalIntegration
             double a = (double)numericUpDown1.Value;
             double b = (double)numericUpDown2.Value;
             double n = (int)numericUpDown3.Value;
-            //double leftRect = 0, rightRect = 0, middleRect = 0, trap = 0, simpson = 0;
+            
             if (a > b)
             {
                 MessageBox.Show("Нижня межа більша верхньої, що не може бути");
